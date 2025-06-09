@@ -1,8 +1,8 @@
 <x-app-layout>
     <div class="p-4">
-        <h1 class="text-2xl font-bold">{{ $book->title }}</h1>
-        <p class="text-sm text-gray-600">{{ $book->author }}</p>
-        <p class="text-gray-700 mt-2">{{ $book->description }}</p>
+        <h1 class="text-2xl font-bold text-white">{{ $book->title }}</h1>
+        <p class="text-sm text-gray-300">{{ $book->author }}</p>
+        <p class="text-gray-300 mt-2">{{ $book->description }}</p>
 
         @if($book->cover_path)
             <img src="{{ asset('storage/' . $book->cover_path) }}" class="w-60 my-4" />

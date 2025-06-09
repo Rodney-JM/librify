@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="text-xl font-semibold">📚 Todos os Livros</h2>
+        <h2 class="text-xl text-white"><i class="fa-solid fa-book-open"></i> Todos os Livros</h2>
     </x-slot>
 
     <div class="p-4">
@@ -15,7 +15,7 @@
                     <p class="text-xs text-gray-500">{{ $book->author }}</p>
                     <a href="{{ route('books.show', $book) }}" class="text-indigo-600 text-sm">Ver mais</a>
 
-                    <div class="flex gap-2 mt-2">
+                    <div class="flex gap-2 mt-2 items-center">
                         <a href="{{ route('books.edit', $book) }}" class="text-indigo-600 text-sm">Editar</a>
 
                         <form action="{{ route('books.destroy', $book) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir?')">

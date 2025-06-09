@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
-            <span class="text-indigo-600">➕</span> Novo Livro
+        <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-plus mr-2"></i> Novo Livro
         </h2>
     </x-slot>
 

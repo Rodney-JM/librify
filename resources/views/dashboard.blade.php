@@ -10,16 +10,16 @@
                 <h1 class="text-2xl font-bold">Librify</h1>
             </div>
             <nav class="space-y-4">
-                <a href="{{ route('books.index') }}" class="block hover:text-green-400">📚 Biblioteca</a>
-                <a href="{{ route('books.create') }}" class="block hover:text-green-400">➕ Adicionar Livro</a>
-                <a href="#" class="block hover:text-green-400">❤️ Favoritos</a>
-                <a href="#" class="block hover:text-green-400">📜 Minhas Listas</a>
+                <a href="{{ route('books.index') }}" class="block hover:text-blue-400 transition-all"><i class="fa-solid fa-book mr-2"></i> Biblioteca</a>
+                <a href="{{ route('books.create') }}" class="block hover:text-blue-400 transition-all"><i class="fa-solid fa-plus mr-2"></i> Adicionar Livro</a>
+                <a href="#" class="block hover:text-blue-400 transition-all"><i class="fa-solid fa-heart mr-2"></i> Favoritos</a>
+                <a href="#" class="block hover:text-blue-400 transition-all"><i class="fa-solid fa-clipboard-list mr-2"></i> Minhas Listas</a>
             </nav>
         </aside>
 
         <!-- Conteúdo principal -->
         <main class="col-span-4 bg-gray-100 overflow-y-auto p-6">
-            <h2 class="text-xl font-semibold mb-4">📚 Seus Livros</h2>
+            <h2 class="text-xl font-semibold mb-4"><i class="fa-solid fa-book-open"></i> Seus Livros</h2>
 
             @if ($books->isEmpty())
                 <p>Você ainda não adicionou nenhum livro.</p>
@@ -50,19 +50,4 @@
         </main>
     </div>
 
-    <!-- Player Fixo -->
-    <footer class="fixed bottom-0 left-0 right-0 bg-white shadow-inner h-20 flex items-center justify-between px-6">
-        <div class="flex items-center gap-4">
-            <img src="https://via.placeholder.com/50" class="h-12 w-12 object-cover rounded" alt="">
-            <div>
-                <p class="text-sm font-semibold">Título do Livro</p>
-                <p class="text-xs text-gray-500">Autor</p>
-            </div>
-        </div>
-        <div class="flex items-center gap-4">
-            <button class="text-gray-600 hover:text-black">⏮️</button>
-            <button class="text-gray-600 hover:text-black">▶️</button>
-            <button class="text-gray-600 hover:text-black">⏭️</button>
-        </div>
-    </footer>
 </x-app-layout>
